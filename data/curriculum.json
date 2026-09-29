@@ -1,0 +1,56 @@
+{
+  "programs": [
+    {
+      "id": 1,
+      "college_name": "كلية علوم الحاسوب",
+      "program_name": "تقنية المعلومات",
+      "duration_years": 4,
+      "levels": [
+        {
+          "level_number": 1,
+          "level_name": "المستوى الأول",
+          "semesters": [1, 2]
+        },
+        {
+          "level_number": 2,
+          "level_name": "المستوى الثاني",
+          "semesters": [1, 2]
+        },
+        {
+          "level_number": 3,
+          "level_name": "المستوى الثالث",
+          "semesters": [1, 2],
+          "semester_1_courses": [
+            { "code": "MOB-311", "name": "تطوير تطبيقات الموبايل _عملي", "credits": 2, "type": "أساسي" },
+            { "code": "MOB-312", "name": "تطوير تطبيقات الموبايل _نظري", "credits": 3, "type": "أساسي" },
+            { "code": "WEB-311", "name": "تطوير الويب _عملي", "credits": 2, "type": "أساسي" },
+            { "code": "WEB-312", "name": "تطوير الويب _نظري", "credits": 3, "type": "أساسي" },
+            { "code": "SE-311",  "name": "هندسة البرمجيات _عملي", "credits": 2, "type": "أساسي" },
+            { "code": "SE-312",  "name": "هندسة البرمجيات _نظري", "credits": 3, "type": "أساسي" },
+            { "code": "AI-311",  "name": "الذكاء الاصطناعي _عملي", "credits": 2, "type": "أساسي" },
+            { "code": "AI-312",  "name": "الذكاء الاصطناعي _نظري", "credits": 3, "type": "أساسي" },
+            { "code": "SEC-311", "name": "أمن المعلومات _نظري", "credits": 3, "type": "أساسي" },
+            { "code": "SEC-312", "name": "أمن المعلومات _عملي", "credits": 2, "type": "أساسي" }
+          ]
+        },
+        {
+          "level_number": 4,
+          "level_name": "المستوى الرابع",
+          "semesters": [1, 2]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "college_name": "كلية علوم الحاسوب",
+      "program_name": "علوم الحاسوب",
+      "duration_years": 4
+    },
+    {
+      "id": 3,
+      "college_name": "كلية العلوم الطبية",
+      "program_name": "صيدلة سريرية",
+      "duration_years": 5
+    }
+  ]
+}

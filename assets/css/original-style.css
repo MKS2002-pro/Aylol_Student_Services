@@ -1,0 +1,1268 @@
+/* ========================================================
+   بوابة كلية أيلول الجامعية - أنماط CSS الموحدة
+   Aylol University College Student Portal
+   مطابقة بنسبة 100% للصور المرفقة (1.png - 5.png)
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary-blue: #1b75bb;
+  --primary-blue-hover: #15629c;
+  --secondary-cyan: #009fe3;
+  --secondary-cyan-hover: #008ecb;
+  --danger-red: #ff4d4f;
+  --danger-red-hover: #eb3d40;
+  --title-red: #dc2626;
+  --text-dark: #0f172a;
+  --text-slate: #334155;
+  --text-muted: #64748b;
+  --bg-app: #f0f4f8;
+  --border-light: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-dark);
+  direction: rtl;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.product-image {
+    width: 150px;
+    height: 150px;
+    object-fit: verify;
+}
+.product-image_2 {
+
+  position: absolute;
+    right: 1px;
+    width: 60px;
+    height: 60px;
+    object-fit: verify;
+}
+
+
+/* --------------------------------------------------------
+   1. الهيدر الرسمي الموحد (Matching 2.png, 3.png, 5.png)
+   -------------------------------------------------------- */
+.site-header {
+  background-color: #ffffff;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+
+.menu-toggle-btn {
+  color: #1e293b;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: px;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+}
+
+.menu-toggle-btn:hover {
+  background-color: #f1f5f9;
+  color: var(--primary-blue);
+}
+
+.header-brand-wrap {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-text-col {
+  position: fixed;
+  right: 80px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+
+.brand-title-ar {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--primary-blue);
+  line-height: 1.2;
+}
+
+.brand-subtitle-en {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.header-logo-badge {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------
+   2. شاشة تسجيل الدخول (Matching 1.png)
+   -------------------------------------------------------- */
+.login-page-body {
+  background-color: #f3f4f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  background-color: #ffffff;
+  border-radius: 28px;
+  padding: 44px 36px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.login-logo-container {
+  margin-bottom: 20px;
+}
+
+.login-logo-svg {
+  width: 116px;
+  height: 116px;
+}
+
+.login-heading {
+  font-size: 28px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 28px;
+  letter-spacing: -0.5px;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.login-input-wrap input {
+  width: 100%;
+  height: 54px;
+  background-color: #e2e8f0;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  padding: 0 50px 0 16px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  outline: none;
+  direction: rtl;
+  text-align: right;
+  transition: all 0.2s ease;
+}
+
+.login-input-wrap input:focus {
+  background-color: #ffffff;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(27, 117, 187, 0.15);
+}
+
+.login-input-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  color: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.btn-login-submit {
+  width: 100%;
+  height: 54px;
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  font-size: 19px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(27, 117, 187, 0.28);
+  margin-top: 6px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-login-submit:hover {
+  background-color: var(--primary-blue-hover);
+}
+
+.btn-login-submit:active {
+  transform: scale(0.99);
+}
+
+/* --------------------------------------------------------
+   3. شاشة الملف الشخصي للطالب (Matching 2.png)
+   -------------------------------------------------------- */
+.profile-layout-container {
+  max-width: 1140px;
+  margin: 32px auto 60px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 920px) {
+  .profile-layout-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.student-card-side {
+  width: 100%;
+}
+
+.student-profile-box {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 30px 24px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.student-photo-frame {
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  border: 4px solid #7dd3fc;
+  overflow: hidden;
+  background-color: #f8fafc;
+  margin-bottom: 16px;
+}
+
+.avatar-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.student-name-header {
+  font-size: 21px;
+  font-weight: 900;
+  color: var(--primary-blue);
+  margin-bottom: 16px;
+}
+
+.student-summary-strip {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.summary-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid var(--border-light);
+  font-size: 13.5px;
+}
+
+.summary-line:last-child {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.summary-val {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.summary-lbl {
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.profile-actions-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-cyan-action {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  background-color: var(--secondary-cyan);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 159, 227, 0.25);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-cyan-action:hover {
+  background-color: var(--secondary-cyan-hover);
+}
+
+.btn-blue-action {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(27, 117, 187, 0.25);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-blue-action:hover {
+  background-color: var(--primary-blue-hover);
+}
+
+.data-sections-side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.info-card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.info-card-header {
+  background-color: #e8f4fc;
+  padding: 14px 24px;
+  border-bottom: 1px solid #d0e7f9;
+}
+
+.info-card-header h2 {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--secondary-cyan);
+}
+
+.info-card-body {
+  padding: 24px;
+}
+
+.fields-2col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 32px;
+}
+
+@media (max-width: 640px) {
+  .fields-2col-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fields-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 13.5px;
+}
+
+.field-item.no-border {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.field-value {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.field-value.mono-val {
+  font-family: monospace;
+  letter-spacing: 0.5px;
+}
+
+.field-title {
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* --------------------------------------------------------
+   4. بيان الحالة المالية للطالب (Matching 3.png)
+   -------------------------------------------------------- */
+.page-title-block {
+  text-align: center;
+  margin: 28px auto 16px;
+}
+
+.college-subheading {
+  font-size: 21px;
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.red-statement-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--title-red);
+}
+
+.header-divider {
+  max-width: 820px;
+  margin: 16px auto 36px;
+  height: 1px;
+  background-color: var(--border-light);
+  border: none;
+}
+
+.levels-container-grid {
+  max-width: 820px;
+  margin: 0 auto 60px;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+@media (max-width: 640px) {
+  .levels-container-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.level-card-item {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 24px 20px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.level-card-item:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.level-illustration-wrap {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.level-ill-svg {
+  width: 140px;
+  height: 110px;
+}
+
+.level-title-text {
+  font-size: 21px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 18px;
+}
+
+.term-buttons-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.btn-term-outline {
+  flex: 1;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 2px solid var(--secondary-cyan);
+  color: var(--secondary-cyan);
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-term-outline:hover {
+  background-color: var(--secondary-cyan);
+  color: #ffffff;
+}
+
+.btn-term-disabled {
+  flex: 1;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 2px solid #e2e8f0;
+  color: #cbd5e1;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: not-allowed;
+}
+
+/* بطاقة المستوى الثالث المقفلة مطابقة للصورة 3 */
+.level-card-item.level-locked-active {
+  border: 2px solid var(--primary-blue);
+}
+
+.padlock-overlay-link {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(2px);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.padlock-icon-box {
+  width: 78px;
+  height: 94px;
+  filter: drop-shadow(0 6px 16px rgba(27, 117, 187, 0.35));
+  transition: transform 0.2s;
+}
+
+.padlock-overlay-link:hover .padlock-icon-box {
+  transform: scale(1.08);
+}
+
+.padlock-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.locked-card-backdrop {
+  filter: blur(1.5px);
+  opacity: 0.35;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  pointer-events: none;
+}
+
+.level-card-item.level-inactive {
+  opacity: 0.6;
+}
+
+.level-title-text.text-muted {
+  color: #94a3b8;
+}
+
+/* --------------------------------------------------------
+   5. القائمة الجانبية (Matching 4.png)
+   -------------------------------------------------------- */
+.sidebar-open-body {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+.sidebar-backdrop-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 50;
+  text-decoration: none;
+}
+
+.sidebar-drawer-panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 320px;
+  background-color: #ffffff;
+  z-index: 60;
+  box-shadow: 10px 0 35px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--border-light);
+  animation: slideInLeft 0.25s ease-out;
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.sidebar-scrollable-content {
+  padding: 20px 22px;
+  overflow-y: auto;
+}
+
+.sidebar-top-close-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.sidebar-close-btn {
+  color: #1e293b;
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 8px;
+  transition: color 0.2s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-close-btn:hover {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+.sidebar-student-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.sidebar-photo-ring {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3.5px solid #7dd3fc;
+  overflow: hidden;
+  background-color: #f8fafc;
+  margin-bottom: 12px;
+}
+
+.sidebar-student-name {
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--primary-blue);
+  letter-spacing: -0.3px;
+}
+
+.sidebar-student-level {
+  font-size: 12px;
+  font-weight: 800;
+  color: #ef4444;
+  margin-top: 4px;
+}
+
+.sidebar-sections-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-nav-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-header-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+.group-title-text {
+  font-size: 13.5px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.group-icon-svg.text-blue {
+  color: var(--primary-blue);
+}
+
+.dollar-badge-box {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background-color: rgba(0, 159, 227, 0.15);
+  color: var(--secondary-cyan);
+  font-weight: 900;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.group-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidebar-link-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+
+.sidebar-link-row:hover {
+  background-color: #f8fafc;
+}
+
+.link-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.blue-bullet-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--secondary-cyan);
+}
+
+.sidebar-footer-actions {
+  padding: 18px 22px;
+  border-top: 1px solid #f1f5f9;
+  background-color: #fafbfd;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-sidebar-blue {
+  width: 100%;
+  padding: 11px 16px;
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(27, 117, 187, 0.25);
+  transition: background-color 0.2s;
+}
+
+.btn-sidebar-blue:hover {
+  background-color: var(--primary-blue-hover);
+}
+
+.btn-sidebar-red {
+  width: 100%;
+  padding: 11px 16px;
+  background-color: var(--danger-red);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(255, 77, 79, 0.25);
+  transition: background-color 0.2s;
+}
+
+.btn-sidebar-red:hover {
+  background-color: var(--danger-red-hover);
+}
+
+.sidebar-behind-content {
+  filter: blur(1.5px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------
+   6. كشف سندات الرسوم الدراسية (Matching 5.png)
+   -------------------------------------------------------- */
+.receipts-page-container {
+  max-width: 860px;
+  margin: 28px auto 60px;
+  padding: 0 16px;
+}
+
+.receipts-top-title {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.receipts-top-title h2 {
+  font-size: 21px;
+  font-weight: 900;
+  color: var(--text-dark);
+}
+
+.fee-pills-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.pill-btn {
+  padding: 6px 26px;
+  border-radius: 9999px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.pill-btn.outline {
+  background-color: #ffffff;
+  color: var(--primary-blue);
+  border: 1.5px solid var(--primary-blue);
+}
+
+.pill-btn.solid {
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  border: 1.5px solid var(--primary-blue);
+  box-shadow: 0 2px 6px rgba(27, 117, 187, 0.2);
+}
+
+.statement-blue-frame {
+  background-color: #ffffff;
+  border: 2.5px solid var(--primary-blue);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+}
+
+.statement-box-header {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--text-dark);
+  padding: 12px;
+  border-bottom: 2px solid var(--primary-blue);
+}
+
+.statement-student-strip {
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--primary-blue);
+}
+
+.student-strip-bubble {
+  background-color: #e0f7fa;
+  border: 1px solid #b2ebf2;
+  border-radius: 4px;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.table-responsive-box {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.statement-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 13px;
+}
+
+.statement-data-table th {
+  background-color: #ecfccb;
+  color: #1e3a8a;
+  font-weight: 900;
+  padding: 10px 8px;
+  border: 1px solid var(--primary-blue);
+}
+
+.statement-data-table th:first-child {
+  color: #15803d;
+}
+
+.statement-data-table td {
+  padding: 7px 8px;
+  border: 1px solid #cbd5e1;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.statement-data-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.statement-data-table tbody tr:hover {
+  background-color: #f0f9ff;
+}
+
+.statement-data-table tfoot td {
+  border: 1px solid var(--primary-blue);
+  font-weight: 900;
+  padding: 9px 8px;
+  font-size: 13.5px;
+}
+
+.footer-paid-cell {
+  background-color: #cffafe;
+  color: #0e7490;
+}
+
+.footer-rem-cell {
+  background-color: #fce7f3;
+  color: #be185d;
+}
+
+.footer-amount-val {
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------
+   7. الخدمات الأكاديمية (Matching 7.png)
+   -------------------------------------------------------- */
+.academic-services-container {
+  max-width: 780px;
+  margin: 32px auto 60px;
+  padding: 0 16px;
+}
+
+.academic-title-block {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.academic-subheading {
+  font-size: 21px;
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.academic-main-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--text-dark);
+}
+
+.academic-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.academic-service-card {
+  background-color: #ffffff;
+  border-radius: 26px;
+  padding: 24px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.academic-service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.09);
+}
+
+.academic-card-text {
+  text-align: right;
+}
+
+.academic-card-text h3 {
+  font-size: 23px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.academic-card-text p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.academic-icon-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.academic-icon-circle.blue-circle {
+  background-color: #009fe3;
+}
+
+.academic-icon-circle.red-circle {
+  background-color: #dc2626;
+}
+
+/* --------------------------------------------------------
+   8. كشف الحضور والغياب (Matching 9.png)
+   -------------------------------------------------------- */
+.attendance-page-container,
+.grades-page-container {
+  max-width: 1040px;
+  margin: 28px auto 60px;
+  padding: 0 16px;
+}
+
+.student-strip-heading {
+  text-align: right;
+  font-size: 17px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.attendance-table-card,
+.grades-table-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.attendance-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 12px;
+}
+
+.attendance-matrix-table th,
+.attendance-matrix-table td {
+  border: 1px solid var(--border-light);
+  padding: 6px 4px;
+}
+
+.header-row-green th {
+  background-color: #ecfccb;
+  color: #0f172a;
+  font-weight: 800;
+  padding: 8px 4px;
+}
+
+.header-row-blue th {
+  background-color: #1b75bb;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px;
+}
+
+.attendance-matrix-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.subject-cell {
+  font-weight: 800;
+  color: #0f172a;
+  text-align: right;
+  padding: 8px 12px !important;
+  white-space: nowrap;
+}
+
+.bold-cell {
+  font-weight: 900;
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
+}
+
+.chk {
+  color: #16a34a;
+  font-weight: 900;
+}
+
+.crs {
+  color: #e11d48;
+  font-weight: 900;
+}
+
+.badge-normal {
+  background-color: #dcfce7;
+  color: #15803d;
+  font-weight: 800;
+}
+
+.badge-warning {
+  background-color: #fef9c3;
+  color: #a16207;
+  font-weight: 800;
+}
+
+.badge-danger {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  font-weight: 800;
+}
+
+.attendance-rules-footer {
+  margin-top: 14px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rules-gold-title {
+  color: #a16207;
+}
+
+.rules-red-text {
+  color: #dc2626;
+}
+
+/* --------------------------------------------------------
+   9. بيان درجات الطالب (Matching 10.png)
+   -------------------------------------------------------- */
+.grades-inner-banner {
+  background-color: #e0f7fa;
+  padding: 8px 16px;
+  text-align: right;
+  font-size: 13.5px;
+  font-weight: 900;
+  color: #0f172a;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.grades-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 13px;
+}
+
+.grades-data-table th {
+  background-color: #ecfccb;
+  color: #0f172a;
+  font-weight: 900;
+  padding: 10px 8px;
+  border: 1px solid var(--border-light);
+}
+
+.grades-data-table td {
+  padding: 8px;
+  border: 1px solid var(--border-light);
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.grades-data-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.rate-green {
+  color: #15803d;
+  font-weight: 800;
+}
+
+.score-bold {
+  font-weight: 900;
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
+}
+
+.grades-legend-footer {
+  margin-top: 14px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 800;
+}
+

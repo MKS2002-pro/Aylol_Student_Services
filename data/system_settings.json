@@ -1,0 +1,44 @@
+{
+  "college": {
+    "name_ar": "كلية أيلول الجامعية",
+    "name_en": "Aylol University College",
+    "code": "AUC",
+    "address": "الجمهورية اليمنية - إب - يريم",
+    "phone": "770612187 - 770017481",
+    "email": "info@aylol.edu.ye",
+    "logo": "assets/images/logo.png"
+  },
+  "financial": {
+    "exchange_rate_usd_yer": 250.0,
+    "currency_local": "ريال يمني",
+    "currency_foreign": "دولار أمريكي",
+    "tuition_lock_enabled": true
+  },
+  "attendance_policy": {
+    "total_lectures_per_course": 12,
+    "warning_threshold": 3,
+    "ban_threshold": 5,
+    "warning_label": "إنذار أكاديمي أول",
+    "ban_label": "حرمان فصلي من المقرر"
+  },
+  "grading_policy": {
+    "max_grade": 100.0,
+    "passing_grade": 50.0,
+    "lock_after_days": 15,
+    "weights": {
+      "attendance": 5,
+      "participation": 5,
+      "midterm_theory": 10,
+      "midterm_practical": 10,
+      "final_practical": 10,
+      "final_theory": 60
+    },
+    "scales": [
+      { "min": 90, "max": 100, "letter": "ممتاز" },
+      { "min": 80, "max": 89.99, "letter": "جيد جداً" },
+      { "min": 65, "max": 79.99, "letter": "جيد" },
+      { "min": 50, "max": 64.99, "letter": "مقبول" },
+      { "min": 0,  "max": 49.99, "letter": "راسب" }
+    ]
+  }
+}
